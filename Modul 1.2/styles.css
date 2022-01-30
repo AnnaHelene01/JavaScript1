@@ -1,0 +1,27 @@
+body {
+    background-color: beige;
+}
+
+.makeMeRed {
+    color: red; 
+}
+
+.makeMeGreen {
+    color: darkgreen; 
+}
+
+.makeMeBlue {
+    color: blue; 
+}
+
+img {
+    width: 100%;
+    max-width: 320px;
+}
+
+footer {
+    margin: 10px 0;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 2px solid black;
+}
