@@ -53,7 +53,18 @@ btnA.addEventListener('click', ()=> {
     outputElement.innerHTML
 }
 
-sortMe = (a, b) => {} //Den forteller sort at når du går gjennom hele listen så plukker du ut to og to
+sortMe = (a, b) => {
+    var nameA = a.artist.toUpperCase();
+    var nameB = b.artist.toUpperCase();
+    if (nameA < nameB) {
+        return -1;
+    }
+    if (nameA > nameB) {
+        return 1;
+    }
+    //navnene må være lik
+    return 0;
+} //Den forteller sort at når du går gjennom hele listen så plukker du ut to og to
 //elementer, eksempel 1. og 2. element. Den assigner det ene til a og det andre til b. Deretter må du fortelle
 //Hvordan den skal rangere de to elemenetene. Siden det er et objekt må vi ta ut info
 //vi henter artist.name og setter begge til store bokstaver for å være sikker. 
