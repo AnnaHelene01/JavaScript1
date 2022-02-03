@@ -26,7 +26,14 @@ const myAlbums = JSON.parse(bestAlbumsOfAllTime).albums;
 const albumList = document.getElementById("albums");
 albumList.innerHTML = "";
 for (let album of myAlbums) {
-    albumList.innerHTML += `<li class="listitem"><img src="${album.cover}"/>${album.title}, ${album.artist}, ${album.year} </li>`;
+    albumList.innerHTML += `<li class="listitem">
+    <img src="${album.cover}"/>
+    <div>
+    <h2>${album.title}</h2> 
+    <p>${album.artist}</p>
+    <p>${album.year}</p> 
+    </div>
+    </li>`;
 }
 console.log(albumList);
 
@@ -34,13 +41,20 @@ console.log(albumList);
 
 //b) Make a CSS file and style the list and list items, so it looks something like this (or better):
 console.log("b)");
-
+console.log("Sjekk CSS fil");
 
 
 
 //c) Add an event listener to button#sortByArtist and make a function that sorts the lists, 
 //and re-lists it into ol#albums, sorted on the value of the Artist (alphabetically, ascending, ie. the normal way).
 console.log("c)");
+const sortByArtistBtn = document.querySelector("button#sortByArtist");
+sortByArtistBtn.addEventListener('click', sortArtist);
+
+function sortArtist(test) {
+    console.log(myAlbums[0].artist);
+}
+
 
 //navnene må være lik
 //Den forteller sort at når du går gjennom hele listen så plukker du ut to og to

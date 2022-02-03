@@ -1,12 +1,14 @@
 .listitem > img {
     max-width: 130px;
-    float: left;
     margin-right: 10px;
 }
 
 .listitem {
-    border: 1px red;
+    display: flex;
+    border: 1px solid red;
     margin: 10px;
     padding: 10px;   
 }
+
+
 
