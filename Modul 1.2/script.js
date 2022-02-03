@@ -104,7 +104,6 @@ for (const pl of programmingLanguages) {
 
 
 
-
 console.log("Exercise 4");
 //Add an eventListener to the button (with id "tBtn") and make a 
 //function to toggle the class makeMeRed on and off for the footer element.

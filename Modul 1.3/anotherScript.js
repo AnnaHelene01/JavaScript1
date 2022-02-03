@@ -21,50 +21,29 @@ const bestAlbumsOfAllTime = `
 //2. London Calling, The Clash, 1979 
 //3. etc.
 console.log("a)");
-const albumArray = JSON.parse(bestAlbumsOfAllTime)
-console.log(albumArray);
+const myAlbums = JSON.parse(bestAlbumsOfAllTime).albums;
 
-const ouputElement = document.querySelector("ol#albums");
-
-ouputElement.innerHTML = "";
-for (const album of albumArray) {
-    ouputElement.innerHTML += `<li>${album.title}, ${album.artist}, 
-    ${album.year}</li>`;
+const albumList = document.getElementById("albums");
+albumList.innerHTML = "";
+for (let album of myAlbums) {
+    albumList.innerHTML += `<li class="listitem"><img src="${album.cover}"/>${album.title}, ${album.artist}, ${album.year} </li>`;
 }
+console.log(albumList);
+
 
 
 //b) Make a CSS file and style the list and list items, so it looks something like this (or better):
 console.log("b)");
-outputElement.innerHTML = "";
-for (const album of albumArray) {
-    outputElement.innerHTML += `
-    <li>
-       <img src=${album.cover}" alt="${album.title}"`
-}
+
+
 
 
 //c) Add an event listener to button#sortByArtist and make a function that sorts the lists, 
 //and re-lists it into ol#albums, sorted on the value of the Artist (alphabetically, ascending, ie. the normal way).
 console.log("c)");
-const btnA = document.querySelector("button#sortByArtist");
-btnA.addEventListener('click', ()=> {
-    console.log("Button A is clicked");
-    albumArray.sort(sortMe);
-    outputElement.innerHTML
-}
 
-sortMe = (a, b) => {
-    var nameA = a.artist.toUpperCase();
-    var nameB = b.artist.toUpperCase();
-    if (nameA < nameB) {
-        return -1;
-    }
-    if (nameA > nameB) {
-        return 1;
-    }
-    //navnene må være lik
-    return 0;
-} //Den forteller sort at når du går gjennom hele listen så plukker du ut to og to
+//navnene må være lik
+//Den forteller sort at når du går gjennom hele listen så plukker du ut to og to
 //elementer, eksempel 1. og 2. element. Den assigner det ene til a og det andre til b. Deretter må du fortelle
 //Hvordan den skal rangere de to elemenetene. Siden det er et objekt må vi ta ut info
 //vi henter artist.name og setter begge til store bokstaver for å være sikker. 

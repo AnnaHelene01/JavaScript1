@@ -1,17 +1,12 @@
-ol#albums {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-ol#albums > li {
-    border: 1px solid red;
-    margin: 10px;
-    padding: 10px;
-}
-
-ol#albums > li > img {
-    width: 140px;
+.listitem > img {
+    max-width: 130px;
     float: left;
     margin-right: 10px;
 }
+
+.listitem {
+    border: 1px red;
+    margin: 10px;
+    padding: 10px;   
+}
+
