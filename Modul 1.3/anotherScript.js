@@ -52,7 +52,7 @@ const sortByArtistBtn = document.querySelector("button#sortByArtist");
 sortByArtistBtn.addEventListener('click', sortArtist);
 
 function sortArtist(test) {
-    console.log(myAlbums[0].artist);
+    const newAlbum =  
 }
 
 
